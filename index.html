@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premier Schools Exhibition (PSE) - Discover 50+ Top Indian & International Boarding Schools. Interactive Dual-Axis Showcase, On-spot Counseling, Scholarships & Admission Guidance.">
+  <title>Premier Schools Exhibition (PSE) | Discover India's Leading Boarding & Day Schools</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Embedded Complete CSS (Guarantees Instant 100% Styling on Double-Click file:// URLs and http:// servers) -->
+  <style>
+/* ==========================================================================
+   Base & Design System Tokens
+   ========================================================================== */
+:root {
+  --color-primary-navy: #0A192F;
+  --color-primary-deep: #0F2546;
+  --color-primary-blue: #1E3A8A;
+  --color-accent-gold: #D97706;
+  --color-accent-amber: #F59E0B;
+  --color-accent-light: #FEF3C7;
+  --color-secondary-teal: #0D9488;
+  --color-secondary-cyan: #06B6D4;
+  
+  --color-neutral-900: #0F172A;
+  --color-neutral-800: #1E293B;
+  --color-neutral-700: #334155;
+  --color-neutral-600: #475569;
+  --color-neutral-500: #64748B;
+  --color-neutral-400: #94A3B8;
+  --color-neutral-300: #CBD5E1;
+  --color-neutral-200: #E2E8F0;
+  --color-neutral-100: #F1F5F9;
+  --color-neutral-50:  #F8FAFC;
+  --color-white:        #FFFFFF;
+
+  --color-success: #10B981;
+  --color-error:   #EF4444;
+  --color-focus:   #2563EB;
+
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-family-heading: 'Outfit', 'Inter', system-ui, sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  --line-height-tight: 1.15;
+  --line-height-heading: 1.25;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.7;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 42, 0.15);
+
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  --container-max-width: 80rem;
+  --header-height: 4.5rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-neutral-800);
+  background-color: var(--color-neutral-50);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input, button, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+}
+
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--space-4);
+  z-index: 10000;
+  padding: var(--space-3) var(--space-6);
+  background-color: var(--color-accent-amber);
+  color: var(--color-neutral-900);
+  font-weight: 700;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  transition: top var(--transition-fast);
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid var(--color-primary-navy);
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-4);
+  padding-right: var(--space-4);
+}
+
+@media (min-width: 640px) { .container { padding-left: var(--space-6); padding-right: var(--space-6); } }
+@media (min-width: 1024px) { .container { padding-left: var(--space-8); padding-right: var(--space-8); } }
+
+.section-header {
+  text-align: center;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: var(--space-12);
+}
+
+.section-header__badge {
+  display: inline-block;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold);
+  background-color: var(--color-accent-light);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+}
+
+.section-header__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-4);
+}
+
+.section-header__description {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-600);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--color-accent-amber), var(--color-accent-gold));
+  color: var(--color-neutral-900);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.35);
+}
+
+.btn--primary:hover {
+  background: linear-gradient(135deg, #FBBF24, var(--color-accent-amber));
+  transform: translateY(-2px);
+}
+
+.btn--secondary {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary-navy);
+  border: 2px solid var(--color-primary-navy);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-primary-navy);
+  color: var(--color-white);
+}
+
+.slider-control-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.9);
+  color: var(--color-neutral-800);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+  border: 1px solid var(--color-neutral-200);
+}
+
+.slider-control-btn:hover:not(:disabled) {
+  background-color: var(--color-white);
+  transform: scale(1.08);
+}
+
+.pagination-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.pagination-dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-neutral-300);
+  border: none;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.pagination-dot[aria-selected="true"],
+.pagination-dot.is-active {
+  width: 2rem;
+  background-color: var(--color-accent-amber);
+}
+
+.card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--color-neutral-200);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.card__image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card:hover .card__image {
+  transform: scale(1.05);
+}
+
+.card__body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card__badge {
+  align-self: flex-start;
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary-blue);
+  background-color: var(--color-neutral-100);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-3);
+}
+
+.card__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-2);
+}
+
+.card__text {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-neutral-100);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-neutral-700);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-900);
+  background-color: var(--color-neutral-50);
+  border: 1.5px solid var(--color-neutral-300);
+  border-radius: var(--radius-md);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--color-focus);
+  background-color: var(--color-white);
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: var(--header-height);
+  background-color: rgba(10, 25, 47, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header__logo-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.header__logo-badge {
+  background: linear-gradient(135deg, var(--color-accent-amber), var(--color-accent-gold));
+  color: var(--color-neutral-900);
+  font-weight: 900;
+  font-size: var(--font-size-sm);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+}
+
+.header__logo-text {
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  font-size: var(--font-size-lg);
+  color: var(--color-white);
+  line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header__logo-sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-amber);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav__list {
+  display: none;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+@media (min-width: 768px) { .nav__list { display: flex; } }
+
+.nav__link {
+  color: var(--color-neutral-300);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+.nav__link:hover { color: var(--color-accent-amber); }
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - var(--header-height));
+  background-color: var(--color-primary-navy);
+  color: var(--color-white);
+  overflow: hidden;
+}
+
+.dual-axis-carousel {
+  position: relative;
+  width: 100%;
+  height: clamp(32rem, 75vh, 48rem);
+  overflow: hidden;
+}
+
+.dual-axis-carousel__h-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-slow);
+}
+
+.dual-axis-carousel__h-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.dual-axis-carousel__v-track {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-slow);
+}
+
+.dual-axis-carousel__v-slide {
+  min-height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  padding: var(--space-8) var(--space-4);
+}
+
+.dual-axis-carousel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 25, 47, 0.85) 0%, rgba(10, 25, 47, 0.95) 100%);
+  z-index: 1;
+}
+
+.dual-axis-carousel__content {
+  position: relative;
+  z-index: 2;
+  max-width: 46rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.dual-axis-carousel__city-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: rgba(245, 158, 11, 0.2);
+  border: 1px solid var(--color-accent-amber);
+  color: var(--color-accent-amber);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: var(--space-1.5) var(--space-4);
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.dual-axis-carousel__title {
+  font-family: var(--font-family-heading);
+  font-size: clamp(2.25rem, 5.5vw, 3.75rem);
+  font-weight: 800;
+  line-height: var(--line-height-tight);
+  color: var(--color-white);
+  margin-bottom: var(--space-4);
+}
+
+.dual-axis-carousel__title span {
+  color: var(--color-accent-amber);
+  background: linear-gradient(135deg, #FBBF24, var(--color-accent-amber));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dual-axis-carousel__description {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: var(--color-neutral-300);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-8);
+}
+
+.dual-axis-controls {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-6);
+}
+
+.dual-axis-controls__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+.dual-axis-controls__matrix-status {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-neutral-200);
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+}
+
+.dual-axis-controls__h-prev, .dual-axis-controls__h-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: auto;
+}
+
+.dual-axis-controls__h-prev { left: var(--space-4); }
+.dual-axis-controls__h-next { right: var(--space-4); }
+
+.dual-axis-controls__v-group {
+  position: absolute;
+  right: var(--space-6);
+  bottom: var(--space-12);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  pointer-events: auto;
+}
+
+.marquee-section {
+  background-color: var(--color-neutral-900);
+  padding: var(--space-12) 0;
+  overflow: hidden;
+}
+
+.marquee-section__title {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-accent-amber);
+  margin-bottom: var(--space-8);
+}
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  margin-bottom: var(--space-6);
+  position: relative;
+}
+
+.marquee__track {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  flex-shrink: 0;
+}
+
+.marquee__track--ltr { animation: marquee-scroll-ltr 30s linear infinite; }
+.marquee__track--rtl { animation: marquee-scroll-rtl 30s linear infinite; }
+
+.marquee:hover .marquee__track,
+.marquee:focus-within .marquee__track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-scroll-ltr {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-scroll-rtl {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.marquee__item {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-6);
+  height: 4rem;
+  min-width: 12rem;
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.choose-schools {
+  padding: var(--space-20) 0;
+  background-color: var(--color-neutral-50);
+}
+
+.choose-schools__grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) { .choose-schools__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .choose-schools__grid { grid-template-columns: repeat(4, 1fr); } }
+
+@media (max-width: 767px) {
+  .choose-schools__grid--mobile-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: var(--space-6);
+    gap: var(--space-4);
+  }
+
+  .choose-schools__grid--mobile-slider .card {
+    min-width: 85%;
+    scroll-snap-align: center;
+    flex-shrink: 0;
+  }
+}
+
+.choose-schools__pagination {
+  display: none;
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 767px) {
+  .choose-schools__pagination { display: flex; }
+}
+
+.exhibition {
+  padding: var(--space-20) 0;
+  background-color: var(--color-white);
+}
+
+.exhibition-slider {
+  position: relative;
+  width: 100%;
+}
+
+.exhibition-slider__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.exhibition-slider__track {
+  display: flex;
+  gap: var(--space-6);
+  transition: transform var(--transition-normal);
+}
+
+.exhibition-card {
+  flex: 0 0 100%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--color-neutral-50);
+  border: 1.5px solid var(--color-neutral-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+}
+
+@media (min-width: 640px) { .exhibition-card { flex: 0 0 calc(50% - var(--space-3)); } }
+@media (min-width: 1024px) { .exhibition-card { flex: 0 0 calc(33.333% - (var(--space-6) * 2 / 3)); } }
+
+.exhibition-card__icon {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-accent-light);
+  color: var(--color-accent-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+
+.exhibition-card__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-3);
+}
+
+.exhibition-card__text {
+  font-size: var(--font-size-base);
+  color: var(--color-neutral-600);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--space-6);
+}
+
+.exhibition-slider__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-8);
+}
+
+.register-section {
+  padding: var(--space-20) 0;
+  background: linear-gradient(135deg, var(--color-primary-navy), var(--color-primary-deep));
+  color: var(--color-white);
+}
+
+.register-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+@media (min-width: 1024px) { .register-grid { grid-template-columns: 1fr 1fr; } }
+
+.register-card {
+  background: var(--color-white);
+  color: var(--color-neutral-900);
+  border-radius: var(--radius-2xl);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  box-shadow: var(--shadow-xl);
+}
+
+.register-card__title {
+  font-family: var(--font-family-heading);
+  font-size: var(--font-size-2xl);
+  font-weight: 800;
+  color: var(--color-primary-navy);
+  margin-bottom: var(--space-2);
+}
+
+.footer {
+  background-color: var(--color-neutral-900);
+  color: var(--color-neutral-400);
+  padding: var(--space-16) 0 var(--space-8);
+  font-size: var(--font-size-sm);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-8);
+  padding-top: var(--space-8);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- WCAG 2.2 AA Skip Link for Keyboard & Screen Reader Users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Header Navigation Landmark -->
+  <header class="header">
+    <div class="container header__container">
+      <a href="#" class="header__logo-link" aria-label="Premier Schools Exhibition Homepage">
+        <span class="header__logo-badge">PSE 2026</span>
+        <div class="header__logo-text">
+          <span>Premier Schools</span>
+          <span class="header__logo-sub">Exhibition</span>
+        </div>
+      </a>
+
+      <nav class="nav" role="navigation" aria-label="Main Navigation">
+        <ul class="nav__list">
+          <li><a href="#hero-section" class="nav__link">Overview</a></li>
+          <li><a href="#participating-schools" class="nav__link">Schools</a></li>
+          <li><a href="#choose-schools-section" class="nav__link">Categories</a></li>
+          <li><a href="#exhibition-highlights-section" class="nav__link">Highlights</a></li>
+          <li><a href="#register-section" class="nav__link">Schedule</a></li>
+        </ul>
+      </nav>
+
+      <a href="#register-section" class="btn btn--primary">
+        <span>Get Entry Pass</span>
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <!-- Main Landmark -->
+  <main id="main-content">
+
+    <!-- 1. HERO SECTION: Dual-Axis Slider Matrix (Horizontal & Vertical) -->
+    <section id="hero-section" class="hero" aria-label="Hero Showcase Exhibition Tour">
+      <div 
+        id="hero-dual-axis-carousel"
+        class="dual-axis-carousel"
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="Premier Schools Dual Axis City & Highlight Matrix Carousel"
+        aria-live="polite"
+        aria-atomic="true"
+        tabindex="0"
+      >
+        <div class="dual-axis-carousel__h-track">
+
+          <!-- CITY 1: Gurgaon -->
+          <article class="dual-axis-carousel__h-slide" data-city-name="Gurgaon">
+            <div class="dual-axis-carousel__v-track">
+
+              <div class="dual-axis-carousel__v-slide" style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.92)), url('https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1600&q=80');">
+                <div class="dual-axis-carousel__overlay"></div>
+                <div class="container dual-axis-carousel__content">
+                  <span class="dual-axis-carousel__city-badge">Gurgaon • Oct 12th &amp; 13th</span>
+                  <h1 class="dual-axis-carousel__title">Discover India's <span>Top Premier Boarding</span> Schools</h1>
+                  <p class="dual-axis-carousel__description">Meet school leaders face-to-face from 50+ legacy institutions. Explore CBSE, ICSE, IB, and Cambridge curricula all under one roof.</p>
+                  <div class="dual-axis-controls__actions">
+                    <a href="#register-section" class="btn btn--primary">Book VIP Pass (Free)</a>
+                    <a href="#participating-schools" class="btn btn--secondary">Explore Participating Schools</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dual-axis-carousel__v-slide" style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.92)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1600&q=80');">
+                <div class="dual-axis-carousel__overlay"></div>
+                <div class="container dual-axis-carousel__content">
+                  <span class="dual-axis-carousel__city-badge">Gurgaon • Hotel Leela Ambience</span>
+                  <h2 class="dual-axis-carousel__title">1-on-1 Expert <span>Career &amp; School</span> Counseling</h2>
+                  <p class="dual-axis-carousel__description">Get personalized guidance on boarding school selection, campus environment, sports infrastructure, and college prep track records.</p>
+                  <div>
+                    <a href="#register-section" class="btn btn--primary">Reserve Counseling Slot</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- CITY 2: New Delhi -->
+          <article class="dual-axis-carousel__h-slide" data-city-name="New Delhi">
+            <div class="dual-axis-carousel__v-track">
+
+              <div class="dual-axis-carousel__v-slide" style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.92)), url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1600&q=80');">
+                <div class="dual-axis-carousel__overlay"></div>
+                <div class="container dual-axis-carousel__content">
+                  <span class="dual-axis-carousel__city-badge">New Delhi • Nov 2nd &amp; 3rd</span>
+                  <h2 class="dual-axis-carousel__title">On-Spot <span>Admissions &amp; Merit</span> Scholarships</h2>
+                  <p class="dual-axis-carousel__description">Interact directly with Admissions Directors, apply for exclusive merit scholarships, and skip lengthy application waitlists.</p>
+                  <div>
+                    <a href="#register-section" class="btn btn--primary">Register For Delhi Event</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dual-axis-carousel__v-slide" style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.92)), url('https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1600&q=80');">
+                <div class="dual-axis-carousel__overlay"></div>
+                <div class="container dual-axis-carousel__content">
+                  <span class="dual-axis-carousel__city-badge">New Delhi • Shangri-La Eros</span>
+                  <h2 class="dual-axis-carousel__title">Global <span>IB &amp; Cambridge</span> Curricula Showcase</h2>
+                  <p class="dual-axis-carousel__description">Explore world-class international boarding schools offering holistic leadership, global exchange, and ivy-league placements.</p>
+                  <div>
+                    <a href="#register-section" class="btn btn--primary">Get Free Invite</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- CITY 3: Mumbai -->
+          <article class="dual-axis-carousel__h-slide" data-city-name="Mumbai">
+            <div class="dual-axis-carousel__v-track">
+              <div class="dual-axis-carousel__v-slide" style="background-image: linear-gradient(rgba(10,25,47,0.85), rgba(10,25,47,0.92)), url('https://images.unsplash.com/photo-1519452635265-7b1fbfd1e4e0?auto=format&fit=crop&w=1600&q=80');">
+                <div class="dual-axis-carousel__overlay"></div>
+                <div class="container dual-axis-carousel__content">
+                  <span class="dual-axis-carousel__city-badge">Mumbai • Nov 16th &amp; 17th</span>
+                  <h2 class="dual-axis-carousel__title">India's Premier <span>Co-Ed &amp; All-Boys/Girls</span> Legacy Schools</h2>
+                  <p class="dual-axis-carousel__description">Experience traditional heritage schools alongside ultra-modern eco-friendly campuses. Comprehensive insights for parents.</p>
+                  <div>
+                    <a href="#register-section" class="btn btn--primary">Book Mumbai Entry</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Controls Overlay -->
+        <div class="dual-axis-controls">
+          <div class="dual-axis-controls__top">
+            <span id="hero-matrix-status" class="dual-axis-controls__matrix-status" aria-live="polite">Gurgaon • Highlight 1 of 2</span>
+            <button id="hero-play-pause" class="slider-control-btn dual-axis-controls__play-pause" type="button" aria-label="Pause slideshow">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+            </button>
+          </div>
+
+          <button id="hero-prev-h" class="slider-control-btn dual-axis-controls__h-prev" type="button" aria-label="Previous City (Left)">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <button id="hero-next-h" class="slider-control-btn dual-axis-controls__h-next" type="button" aria-label="Next City (Right)">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+          </button>
+
+          <div class="dual-axis-controls__v-group">
+            <button id="hero-prev-v" class="slider-control-btn" type="button" aria-label="Previous Highlight (Up)">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+            </button>
+            <button id="hero-next-v" class="slider-control-btn" type="button" aria-label="Next Highlight (Down)">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. PARTICIPATING SCHOOL LOGOS MARQUEE -->
+    <section id="participating-schools" class="marquee-section" aria-label="Participating School Logos Ticker">
+      <div class="container">
+        <h2 class="marquee-section__title">50+ Participating Legacy &amp; Global Institutions</h2>
+      </div>
+
+      <div class="marquee" aria-label="Participating Schools Row 1" tabindex="0">
+        <div class="marquee__track marquee__track--ltr">
+          <div class="marquee__item"><span>Woodstock School</span></div>
+          <div class="marquee__item"><span>Mayo College Ajmer</span></div>
+          <div class="marquee__item"><span>The Doon School</span></div>
+          <div class="marquee__item"><span>Pathways World School</span></div>
+          <div class="marquee__item"><span>GD Goenka World</span></div>
+          <div class="marquee__item"><span>The Scindia School</span></div>
+          <div class="marquee__item"><span>Welham Girls' School</span></div>
+          <div class="marquee__item"><span>Heritage Experiential</span></div>
+          <div class="marquee__item"><span>Woodstock School</span></div>
+          <div class="marquee__item"><span>Mayo College Ajmer</span></div>
+          <div class="marquee__item"><span>The Doon School</span></div>
+          <div class="marquee__item"><span>Pathways World School</span></div>
+          <div class="marquee__item"><span>GD Goenka World</span></div>
+          <div class="marquee__item"><span>The Scindia School</span></div>
+        </div>
+      </div>
+
+      <div class="marquee" aria-label="Participating Schools Row 2" tabindex="0">
+        <div class="marquee__track marquee__track--rtl">
+          <div class="marquee__item"><span>Sherwood College</span></div>
+          <div class="marquee__item"><span>Bishop Cotton School</span></div>
+          <div class="marquee__item"><span>Lawrence School Sanawar</span></div>
+          <div class="marquee__item"><span>Unison World School</span></div>
+          <div class="marquee__item"><span>Mussoorie International</span></div>
+          <div class="marquee__item"><span>Kodaikanal International</span></div>
+          <div class="marquee__item"><span>Trivandrum International</span></div>
+          <div class="marquee__item"><span>Good Shepherd International</span></div>
+          <div class="marquee__item"><span>Sherwood College</span></div>
+          <div class="marquee__item"><span>Bishop Cotton School</span></div>
+          <div class="marquee__item"><span>Lawrence School Sanawar</span></div>
+          <div class="marquee__item"><span>Unison World School</span></div>
+          <div class="marquee__item"><span>Mussoorie International</span></div>
+          <div class="marquee__item"><span>Kodaikanal International</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. CHOOSE THE SCHOOL -->
+    <section id="choose-schools-section" class="choose-schools" aria-labelledby="choose-schools-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-header__badge">Explore Options</span>
+          <h2 id="choose-schools-heading" class="section-header__title">Choose the Perfect School Category</h2>
+          <p class="section-header__description">Whether you are looking for centuries-old heritage boarding or cutting-edge global IB curricula, discover customized choices for your child.</p>
+        </header>
+
+        <div class="choose-schools__grid">
+          
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=600&q=80" alt="Students walking near historic boarding school building" class="card__image" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="card__badge">Co-Ed &amp; Legacy</span>
+              <h3 class="card__title">Premier Boarding Schools</h3>
+              <p class="card__text">Top heritage residential schools offering world-class sports, character building, leadership development, and lifetime alumni networks.</p>
+              <div class="card__footer">
+                <a href="#register-section" class="btn btn--outline" aria-label="Explore Boarding Schools">View Schools</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Students engaged in science laboratory experiment" class="card__image" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="card__badge">Global Curriculum</span>
+              <h3 class="card__title">IB &amp; Cambridge World Schools</h3>
+              <p class="card__text">International Baccalaureate and IGCSE schools focusing on inquiry-based learning, global exposure, and admissions to top world universities.</p>
+              <div class="card__footer">
+                <a href="#register-section" class="btn btn--outline" aria-label="Explore IB World Schools">View Schools</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=600&q=80" alt="Modern school library with collaborative reading areas" class="card__image" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="card__badge">Holistic Growth</span>
+              <h3 class="card__title">Day Boarding &amp; Extended Schools</h3>
+              <p class="card__text">Structured day boarding programs providing supervised academics, sports coaching, meal care, and extracurriculars until evening.</p>
+              <div class="card__footer">
+                <a href="#register-section" class="btn btn--outline" aria-label="Explore Day Boarding Schools">View Schools</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__image-wrapper">
+              <img src="https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=600&q=80" alt="Students interacting in modern glass facade campus courtyard" class="card__image" loading="lazy">
+            </div>
+            <div class="card__body">
+              <span class="card__badge">Girls &amp; Boys Legacy</span>
+              <h3 class="card__title">Exclusive Single-Sex Institutions</h3>
+              <p class="card__text">Renowned all-boys and all-girls boarding institutions fostering focused academic discipline, confidence, and lifelong camaraderie.</p>
+              <div class="card__footer">
+                <a href="#register-section" class="btn btn--outline" aria-label="Explore Single-Sex Institutions">View Schools</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="pagination-dots choose-schools__pagination" role="tablist" aria-label="School category slides pagination"></div>
+      </div>
+    </section>
+
+    <!-- 4. EXHIBITION HIGHLIGHTS -->
+    <section id="exhibition-highlights-section" class="exhibition" aria-labelledby="exhibition-heading">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-header__badge">Why Visit PSE?</span>
+          <h2 id="exhibition-heading" class="section-header__title">Exhibition Highlights &amp; Parent Benefits</h2>
+          <p class="section-header__description">Everything you need to make an informed decision for your child's future in a single day.</p>
+        </header>
+
+        <div class="exhibition-slider" role="region" aria-roledescription="carousel" aria-label="Exhibition Key Highlights Slider">
+          <div class="exhibition-slider__viewport">
+            <div class="exhibition-slider__track">
+
+              <article class="exhibition-card">
+                <div class="exhibition-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                </div>
+                <div>
+                  <h3 class="exhibition-card__title">Direct Interaction with Principals</h3>
+                  <p class="exhibition-card__text">Interact face-to-face with School Principals and Directors of Admission to discuss your child's individual needs, temperament, and aspirations.</p>
+                </div>
+              </article>
+
+              <article class="exhibition-card">
+                <div class="exhibition-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </div>
+                <div>
+                  <h3 class="exhibition-card__title">On-Spot Merit Scholarships</h3>
+                  <p class="exhibition-card__text">Evaluate scholarship opportunities, fee waivers, and financial aid grants offered exclusively for exhibition attendees.</p>
+                </div>
+              </article>
+
+              <article class="exhibition-card">
+                <div class="exhibition-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                </div>
+                <div>
+                  <h3 class="exhibition-card__title">Streamlined Admission Process</h3>
+                  <p class="exhibition-card__text">Collect application kits, complete on-spot registration, and schedule campus visits directly with participating admission teams.</p>
+                </div>
+              </article>
+
+              <article class="exhibition-card">
+                <div class="exhibition-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                </div>
+                <div>
+                  <h3 class="exhibition-card__title">Expert Counseling Seminars</h3>
+                  <p class="exhibition-card__text">Attend expert panel discussions on navigating boarding school transition, emotional readiness, and competitive exam preparation.</p>
+                </div>
+              </article>
+
+              <article class="exhibition-card">
+                <div class="exhibition-card__icon" aria-hidden="true">
+                  <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                </div>
+                <div>
+                  <h3 class="exhibition-card__title">Alumni &amp; Parent Interactive Booths</h3>
+                  <p class="exhibition-card__text">Hear first-hand experiences from current boarding parents and distinguished alumni about campus life and career outcomes.</p>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <div class="exhibition-slider__footer">
+            <div id="exhibition-dots" class="pagination-dots" role="tablist" aria-label="Exhibition highlights pagination"></div>
+            <div style="display: flex; gap: var(--space-3);">
+              <button id="exhibition-prev" class="slider-control-btn" type="button" aria-label="Previous Highlight Slide">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 19l-7-7 7-7"/></svg>
+              </button>
+              <button id="exhibition-next" class="slider-control-btn" type="button" aria-label="Next Highlight Slide">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. REGISTRATION FORM SECTION -->
+    <section id="register-section" class="register-section" aria-labelledby="register-heading">
+      <div class="container">
+        <div class="register-grid">
+          
+          <div>
+            <span class="section-header__badge" style="background: rgba(245,158,11,0.2); color: var(--color-accent-amber);">Free VIP Entry Pass</span>
+            <h2 id="register-heading" class="dual-axis-carousel__title" style="text-align: left;">Register Now for <span>Free Entry &amp; Priority</span> Counseling</h2>
+            <p class="dual-axis-carousel__description" style="text-align: left;">Reserve your complimentary entry pass today. Receive a personalized school comparison guide and guaranteed counseling session.</p>
+          </div>
+
+          <div class="register-card">
+            <h3 class="register-card__title">Get Your Pass Instantly</h3>
+            <form id="pse-register-form" novalidate>
+              <div class="form-group">
+                <label for="parent-name" class="form-label">Parent's Full Name <span style="color: var(--color-error)">*</span></label>
+                <input type="text" id="parent-name" class="form-control" placeholder="e.g. Rajesh Sharma" required aria-required="true">
+              </div>
+
+              <div class="form-group">
+                <label for="phone-number" class="form-label">Mobile Number (WhatsApp) <span style="color: var(--color-error)">*</span></label>
+                <input type="tel" id="phone-number" class="form-control" placeholder="e.g. +91 98765 43210" required aria-required="true">
+              </div>
+
+              <div class="form-group">
+                <label for="city-select" class="form-label">Select Exhibition City <span style="color: var(--color-error)">*</span></label>
+                <select id="city-select" class="form-control" required aria-required="true">
+                  <option value="" disabled selected>Choose nearest venue...</option>
+                  <option value="Gurgaon">Gurgaon • Hotel Leela Ambience (Oct 12-13)</option>
+                  <option value="New Delhi">New Delhi • Shangri-La Eros (Nov 2-3)</option>
+                  <option value="Mumbai">Mumbai • St. Regis Lower Parel (Nov 16-17)</option>
+                  <option value="Bengaluru">Bengaluru • The JW Marriott (Dec 7-8)</option>
+                </select>
+              </div>
+
+              <button type="submit" class="btn btn--primary" style="width: 100%; margin-top: var(--space-4);">
+                <span>Claim Free Pass</span>
+              </button>
+
+              <div id="form-feedback" class="form-feedback" aria-live="assertive" role="alert" style="display: none; margin-top: var(--space-4); padding: var(--space-3); border-radius: var(--radius-md); font-size: var(--font-size-sm); font-weight: 600;"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__bottom">
+        <p>&copy; 2026 Premier Schools Exhibition (PSE). All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/dual-axis-slider.js"></script>
+  <script src="./js/marquee.js"></script>
+  <script src="./js/school-slider.js"></script>
+  <script src="./js/exhibition-slider.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
